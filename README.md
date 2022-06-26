@@ -1,2 +1,2 @@
 # Leetcode-Submissions
-Collection of LeetCode questions to ace the coding interview! - Created using [LeetHub](https://github.com/QasimWani/LeetHub).
+Attemp #23475757 to be consistent at DSA, now being documented 🍻 - Created using [LeetHub](https://github.com/QasimWani/LeetHub).
