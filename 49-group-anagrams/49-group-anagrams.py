@@ -1,17 +1,19 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         
-        char_count_to_words = defaultdict(list)
+        result = {}  
         
         for word in strs:
             
-            chars = [0] * 26 # for all alphabets
-            
-            for char in word:
-                chars[ord(char) - ord("a")] += 1
+            # get sorted alphabets as keys
+            sortedWord = tuple(sorted(word)) 
+
+            # map words with same alphabets to the words
+            if not result.get(sortedWord): 
+                result[sortedWord] = [word]
                 
-            char_count_to_words[tuple(chars)].append(word)
-            
-            
-        return char_count_to_words.values()
+            else:
+                result[sortedWord].append(word)   
+
+        return result.values() 
         
