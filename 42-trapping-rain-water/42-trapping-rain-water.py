@@ -9,7 +9,7 @@ class Solution:
         leftmax, rightmax = height[l], height[r]
         
         while l < r:
-            
+            # since we need [height - min(left,right)] and if left < right, we dont need right
             if leftmax < rightmax:
                 l += 1
                 leftmax = max(leftmax, height[l])
