@@ -17,7 +17,7 @@ class Solution:
             cnt += countPallen(i,i)
             
         # even length pallendromes
-        for i in range(len(s)-1):
+        for i in range(len(s)):
             
             cnt += countPallen(i,i + 1)
             
