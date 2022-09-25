@@ -10,36 +10,36 @@ class Solution:
         # 1. Recursive DFS
         
         # base case
-        if not root:
-            return 0
+#         if not root:
+#             return 0
         
-        maxLeft = self.maxDepth(root.left)
-        maxRight = self.maxDepth(root.right)
+#         maxLeft = self.maxDepth(root.left)
+#         maxRight = self.maxDepth(root.right)
         
-        return 1 + max(maxLeft, maxRight)
+#         return 1 + max(maxLeft, maxRight)
     
     
         # 2. BFS iterative (Level-order-traversal)
         
-#         if not root:
-#             return 0
+        if not root:
+            return 0
         
-#         # use deque
-#         dq = deque([root])
-#         level = 0
+        # use deque
+        dq = deque([root])
+        level = 0
         
-#         while dq:
+        while dq:
             
-#             for i in range(len(dq)):
-#                 node = dq.popleft() # get root node at that particular level
-#                 if node.left:
-#                     dq.append(node.left)
-#                 if node.right:
-#                     dq.append(node.right)
+            for i in range(len(dq)):
+                node = dq.popleft() # get root node at that particular level
+                if node.left:
+                    dq.append(node.left)
+                if node.right:
+                    dq.append(node.right)
                     
-#             level += 1
+            level += 1
             
-#         return level
+        return level
 
 
         # 3. DFS itertative
